@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* Primary colors */
+$desat-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+
+/* Neutral colors */
+$drk-grayish-red: hsl(0, 6%, 24%);
+
+/* Gradient */
+$gradient-bg: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-btn1: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+/*Custom gradient */
+$gradient-btn2: linear-gradient(135deg, hsl(0, 69%, 90%), hsl(0, 66%, 84%));
+
+/* Font family */
+$ff-josefin: 'Josefin Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $ff-josefin;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: $gradient-bg;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    
+    margin-bottom: 40px;
+
+    &__logo {
+        width: 100px;
+        padding: 32px;
+    }
+
+    &__img-mobile {
+        display: block;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        color: $drk-grayish-red;
+        font-size: 2.5rem;
+        letter-spacing: .6rem;
+        padding-top: 65px;
+        text-align: center;
+        font-weight: 600;
+
+        > span {
+            font-weight: 300;
+            color: $desat-red;
+        }
+    }
+
+    &__text {
+        color: $desat-red;
+        padding: 18px 35px 40px;
+        text-align: center;
+        font-size: .9rem;
+        line-height: 1.3rem;
+    }
+
+    &__input {
+        position: relative;
+        height: 50px;
+        width: 310px;
+        margin: 0 auto;
+    }
+
+    &__mail {
+        position: absolute;
+        min-width: 290px;
+        height: 30px;
+        padding: 10px 0 10px 20px;
+        border: 1px solid $drk-grayish-red;
+        border-radius: 50px;
+        outline: none;
+        opacity: .3;
+
+        &--border-error {
+            border-color: $soft-red;
+            opacity: 1;
+        }
+
+        &:focus{
+            opacity: 1;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: -2px;
+        bottom: -4px;
+        height: 54px;
+        width: 64px;
+        border-radius: 100px;
+        outline: none;
+        border: 1px solid transparent;
+        background-image: url(images/icon-arrow.svg), $gradient-btn1;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 15px 15px hsla(0, 36%, 70%, .3);
+        cursor: pointer;
+
+        &:focus {
+            background-image: url(images/icon-arrow.svg), $gradient-btn2;
+            box-shadow:  0 15px 15px rgba(173, 84, 84, 0.3);
+        }
+    }
+
+    &__error-icon {
+        display: block;
+        position: absolute;
+        background-image: url('images/icon-error.svg');
+        width: 24px;
+        height: 24px;
+        right: 25%;
+        top: 25%;
+        z-index: 999;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__error-text {
+        display: block;
+        position: absolute;
+        left:7%;
+        bottom: -40%;
+        font-size: .8rem;
+        color: $soft-red;
+
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+.img-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 700px)  {
+
+    .wrapper__img-mobile {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    html,
+    body {
+        min-width: 100vw;
+        flex-direction: row;
+        background-image: url(images/bg-pattern-desktop.svg), $gradient-bg;
+    }
+
+    .wrapper{
+        margin: 5% auto 0 auto;
+        max-width: 450px;
+        
+        &__logo {
+            width: 160px;
+            padding: 0;
+        }
+
+        &__img-mobile {
+            display: none;
+        }
+
+        &__header {
+            font-size: 4rem;
+            width: 360px;
+            text-align: left;
+            padding-top: 134px;
+            letter-spacing: 1.1rem;
+            line-height: 4.2rem;
+        }
+
+        &__text {
+            text-align: left;
+            padding: 24.5px 0 44px;
+            font-size: 1rem;
+            line-height: 1.65rem;
+        }
+
+        &__input {
+            width: 440px;
+            height: 56px;
+        }
+
+        &__mail {
+            width: 400px;
+            height: 34px;
+        }
+
+        &__btn {
+            right: 0;
+            bottom: 0;
+            height: 58px;
+            width: 100px;
+        }
+    }
+
+    .img-desktop {
+        display: block;
+    }
+}

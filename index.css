@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* Primary colors */
+/* Neutral colors */
+/* Gradient */
+/*Custom gradient */
+/* Font family */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 375px;
+  margin-bottom: 40px;
+}
+
+.wrapper__logo {
+  width: 100px;
+  padding: 32px;
+}
+
+.wrapper__img-mobile {
+  display: block;
+}
+
+.wrapper__header {
+  text-transform: uppercase;
+  color: #413a3a;
+  font-size: 2.5rem;
+  letter-spacing: .6rem;
+  padding-top: 65px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.wrapper__header > span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.wrapper__text {
+  color: #ce9797;
+  padding: 18px 35px 40px;
+  text-align: center;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+
+.wrapper__input {
+  position: relative;
+  height: 50px;
+  width: 310px;
+  margin: 0 auto;
+}
+
+.wrapper__mail {
+  position: absolute;
+  min-width: 290px;
+  height: 30px;
+  padding: 10px 0 10px 20px;
+  border: 1px solid #413a3a;
+  border-radius: 50px;
+  outline: none;
+  opacity: .3;
+}
+
+.wrapper__mail--border-error {
+  border-color: #f96262;
+  opacity: 1;
+}
+
+.wrapper__mail:focus {
+  opacity: 1;
+}
+
+.wrapper__btn {
+  position: absolute;
+  right: -2px;
+  bottom: -4px;
+  height: 54px;
+  width: 64px;
+  border-radius: 100px;
+  outline: none;
+  border: 1px solid transparent;
+  background-image: url(images/icon-arrow.svg), linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: 0 15px 15px rgba(206, 151, 151, 0.3);
+          box-shadow: 0 15px 15px rgba(206, 151, 151, 0.3);
+  cursor: pointer;
+}
+
+.wrapper__btn:focus {
+  background-image: url(images/icon-arrow.svg), linear-gradient(135deg, #f7d4d4, #f1bbbb);
+  -webkit-box-shadow: 0 15px 15px rgba(173, 84, 84, 0.3);
+          box-shadow: 0 15px 15px rgba(173, 84, 84, 0.3);
+}
+
+.wrapper__error-icon {
+  display: block;
+  position: absolute;
+  background-image: url("images/icon-error.svg");
+  width: 24px;
+  height: 24px;
+  right: 25%;
+  top: 25%;
+  z-index: 999;
+}
+
+.wrapper__error-icon--hidden {
+  display: none;
+}
+
+.wrapper__error-text {
+  display: block;
+  position: absolute;
+  left: 7%;
+  bottom: -40%;
+  font-size: .8rem;
+  color: #f96262;
+}
+
+.wrapper__error-text--hidden {
+  display: none;
+}
+
+.img-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper__img-mobile {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  html,
+  body {
+    min-width: 100vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-image: url(images/bg-pattern-desktop.svg), linear-gradient(135deg, white, #fff5f5);
+  }
+  .wrapper {
+    margin: 5% auto 0 auto;
+    max-width: 450px;
+  }
+  .wrapper__logo {
+    width: 160px;
+    padding: 0;
+  }
+  .wrapper__img-mobile {
+    display: none;
+  }
+  .wrapper__header {
+    font-size: 4rem;
+    width: 360px;
+    text-align: left;
+    padding-top: 134px;
+    letter-spacing: 1.1rem;
+    line-height: 4.2rem;
+  }
+  .wrapper__text {
+    text-align: left;
+    padding: 24.5px 0 44px;
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  .wrapper__input {
+    width: 440px;
+    height: 56px;
+  }
+  .wrapper__mail {
+    width: 400px;
+    height: 34px;
+  }
+  .wrapper__btn {
+    right: 0;
+    bottom: 0;
+    height: 58px;
+    width: 100px;
+  }
+  .img-desktop {
+    display: block;
+  }
+}
+/*# sourceMappingURL=index.css.map */

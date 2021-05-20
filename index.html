@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 30px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="bg-pattern"></div>
+    <img src="images/logo.svg" alt="Base Apparel logo" class="wrapper__logo">
+    <img src="images/hero-mobile.jpg" alt="Image of a woman" class="wrapper__img-mobile">
+    <div class="wrapper__header">
+      <span>We're</span>
+      <p>coming</p>
+      <p>soon</p>
+    </div>
+    <p class="wrapper__text">
+      Hello fellow shoppers! We're currently building our new fashion store. 
+      Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+    <form class="wrapper__input">
+      <input type="mail" placeholder="Email Adress" class="wrapper__mail" value="">
+      <button value="Submit" aria-label="Submit email" class="wrapper__btn"></button>
+      <div class="wrapper__error-icon wrapper__error-icon--hidden"></div>
+      <div class="wrapper__error-text wrapper__error-text--hidden">Please provide a valid email</div>
+    </form>
+    <div>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        <br> 
+        Coded by <a href="https://www.frontendmentor.io/profile/Raelian">Rael</a>.
+      </p>
+    </div>
+  </div>
+  <img src="images/hero-desktop.jpg" alt="Image of a woman" class="img-desktop">
+  
+  <script src="index.js"></script>
+</body>
+</html>
