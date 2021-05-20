@@ -48,6 +48,8 @@ body {
     }
 
     &__header {
+        max-width: 250px;
+        margin: 0 auto;
         text-transform: uppercase;
         color: $drk-grayish-red;
         font-size: 2.5rem;
@@ -190,8 +192,9 @@ body {
         }
 
         &__header {
+            margin: 0;
             font-size: 4rem;
-            width: 360px;
+            max-width: 360px;
             text-align: left;
             padding-top: 134px;
             letter-spacing: 1.1rem;
