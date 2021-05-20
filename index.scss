@@ -176,6 +176,7 @@ body {
         min-width: 100vw;
         flex-direction: row;
         background-image: url(images/bg-pattern-desktop.svg), $gradient-bg;
+        background-position: fixed;
     }
 
     .wrapper{
